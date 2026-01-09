@@ -50,7 +50,7 @@ public class User {
         return age;
     }
 
-    // Equals e HasCode
+    // Equals e HashCode
     @Override
     public boolean equals(Object o) {
         if (this == o)
