@@ -4,6 +4,11 @@ import com.gabrielveras.core.User;
 import com.gabrielveras.core.UserRepository;
 import com.gabrielveras.core.UserService;
 
+/**
+ * Classe responsável por simular o uso da aplicação
+ * e demonstrar o fluxo entre Repository, Service e Entity.
+ */
+
 public class Main {
 public static void main (String[] args) {
     

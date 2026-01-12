@@ -12,6 +12,7 @@ public class User {
 
     // Construtor
     public User(Long id, String name, String email, int age) {
+        // Garante que o objeto User nunca seja criado em um estado inválido
         if (id == null) {
             throw new IllegalArgumentException("Id cannot be null");
         }

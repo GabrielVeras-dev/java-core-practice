@@ -12,6 +12,7 @@ public class UserService {
             throw new IllegalArgumentException("User cannot be null");
         }
 
+        // Regra de negócio: não permitir usuários com e-mail duplicado
         boolean emailExists = repository.findAll().stream().anyMatch(u -> u.getEmail().equalsIgnoreCase(user.getEmail()));
 
         if (emailExists) {
@@ -21,6 +22,7 @@ public class UserService {
         repository.add(user);
     }
 
+    // O Service decide como tratar ausência de dados
     public User findById(Long id){
         return repository.findById(id).orElseThrow(() -> new IllegalArgumentException("User not found"));
     }
